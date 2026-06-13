@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+  ============================================================
+  BUSINESS OPERATIONS NOTES — Reynolds Home Inspection
+  ============================================================
+  This website was built for lead generation. To update:
+  - Phone: Search for "+1 (555) 123-4567" and replace all instances
+  - Email: Search for "hello@examplebusiness.com" and replace all
+  - Business address: Search for "[PLACEHOLDER: Business Address]"
+  - Credentials: Search for "[PLACEHOLDER:" to find all placeholders
+  - Testimonials: Search for "[CLIENT NAME]" to find testimonial cards
+
+  To go live:
+  1. Update all placeholders marked with [PLACEHOLDER: ...]
+  2. Replace MEASUREMENT_ID in the Google Analytics snippet (bottom)
+  3. Connect a form backend (Formspree or Netlify Forms — see README)
+  4. Deploy to Netlify (see README for instructions)
+  ============================================================
+  -->
+
+  <!-- ===================== SEO: Core Meta ===================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reynolds Home Inspection | Veteran-Owned Asset Protection Inspections in Chicago</title>
+  <meta name="description" content="Reynolds Home Inspection is a veteran-owned property inspection company serving Chicago and surrounding suburbs. Thorough, educational inspections for buyers and investors. Radon, mold, sewer scope, and more. Call +1 (555) 123-4567.">
+
+  <!-- ===================== SEO: Canonical ===================== -->
+  <!-- PLACEHOLDER: Replace with your live domain -->
+  <link rel="canonical" href="https://[PLACEHOLDER-YOUR-DOMAIN].com/">
+
+  <!-- ===================== SEO: Open Graph ===================== -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Reynolds Home Inspection | Veteran-Owned Asset Protection Inspections in Chicago">
+  <meta property="og:description" content="Deep-dive property inspections for buyers and investors across Chicago and the suburbs. Not a checklist — a complete education on your property.">
+  <meta property="og:url" content="https://[PLACEHOLDER-YOUR-DOMAIN].com/">
+  <!-- PLACEHOLDER: Replace with actual OG image (1200x630px recommended) -->
+  <meta property="og:image" content="https://[PLACEHOLDER-YOUR-DOMAIN].com/og-image.jpg">
+  <meta property="og:site_name" content="Reynolds Home Inspection">
+
+  <!-- ===================== SEO: Twitter Card ===================== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Reynolds Home Inspection | Veteran-Owned Asset Protection Inspections in Chicago">
+  <meta name="twitter:description" content="Deep-dive property inspections for buyers and investors across Chicago and the suburbs. Not a checklist — a complete education on your property.">
+  <!-- PLACEHOLDER: Replace with actual Twitter image -->
+  <meta name="twitter:image" content="https://[PLACEHOLDER-YOUR-DOMAIN].com/og-image.jpg">
+
+  <!-- ===================== Local SEO: JSON-LD Schema ===================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Reynolds Home Inspection",
+    "description": "Veteran-owned property inspection company serving Chicago and surrounding suburbs. Residential, pre-listing, investment, radon, mold, and sewer scope inspections.",
+    "url": "https://[PLACEHOLDER-YOUR-DOMAIN].com/",
+    "telephone": "+15551234567",
+    "email": "hello@examplebusiness.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "[PLACEHOLDER: City]",
+      "addressRegion": "IL",
+      "addressCountry": "US",
+      "streetAddress": "[PLACEHOLDER: Street Address]",
+      "postalCode": "[PLACEHOLDER: ZIP Code]"
+    },
+    "areaServed": [
+      "Chicago",
+      "Chicago Suburbs",
+      "Cook County",
+      "DuPage County",
+      "Lake County",
+      "Will County"
+    ],
+    "openingHours": "[PLACEHOLDER: Business Hours e.g. Mo-Fr 08:00-18:00]",
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "reviewCount": "100"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Inspection Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Property Inspections"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pre-Listing Inspections"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Investment Property Inspections"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Radon Gas Testing"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mold & Indoor Air Quality Sampling"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sewer Line Video Scope Inspection"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- ===================== Google Analytics (Commented Out) ===================== -->
+  <!--
+  TO ENABLE: Replace MEASUREMENT_ID with your actual GA4 Measurement ID (format: G-XXXXXXXXXX)
+  Then uncomment the two script tags below.
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'MEASUREMENT_ID');
+  </script>
+  -->
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       SKIP NAVIGATION (Accessibility)
+       ============================================================ -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================================
+       STICKY HEADER / NAVIGATION
+       ============================================================ -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+
+      <!-- Logo / Business Name -->
+      <a href="#hero" class="logo" aria-label="Reynolds Home Inspection — Home">
+        <span class="logo-main">Reynolds</span>
+        <span class="logo-sub">Home Inspection</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Primary navigation">
+        <ul role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#agents">For Agents</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Right: Phone + Theme Toggle + Hamburger -->
+      <div class="header-actions">
+        <!-- EDITABLE: Update phone number here -->
+        <a href="tel:+15551234567" class="header-phone" aria-label="Call Reynolds Home Inspection at +1 555 123 4567">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.01-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.25v-.33z"/></svg>
+          <span>(555) 123-4567</span>
+        </a>
+
+        <!-- Dark/Light Mode Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="icon-sun" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#process" class="mobile-nav-link">How It Works</a></li>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#agents" class="mobile-nav-link">For Agents</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link">Reviews</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li>
+          <!-- EDITABLE: Update phone number here -->
+          <a href="tel:+15551234567" class="mobile-nav-link mobile-nav-call">
+            Call: (555) 123-4567
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content">
+
+    <!-- ==========================================================
+         SECTION 1: HERO
+         ========================================================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Veteran-Owned &amp; Operated · Chicago, IL
+        </div>
+
+        <h1 id="hero-heading">
+          Your Property Deserves More Than a Checklist. It Deserves an Advisor.
+        </h1>
+
+        <p class="hero-sub">
+          Reynolds Home Inspection delivers deep-dive, multi-system evaluations for home buyers and real estate investors who need the full picture — not a rushed walkthrough — before closing on one of the most significant financial decisions of their lives.
+        </p>
+
+        <div class="hero-trust-badges" aria-label="Trust credentials">
+          <div class="hero-trust-badge">
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span><strong>4.9+ Google Rating</strong></span>
+          </div>
+          <div class="hero-trust-badge">
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Fully Licensed, Insured &amp; Certified</span>
+          </div>
+        </div>
+
+        <div class="hero-ctas">
+          <!-- Primary CTA -->
+          <a href="#contact" class="btn btn-primary btn-lg">
+            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Schedule Your Inspection
+          </a>
+          <!-- Secondary CTA -->
+          <a href="tel:+15551234567" class="btn btn-secondary btn-lg">
+            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.01-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.25v-.33z"/></svg>
+            Call Now
+          </a>
+        </div>
+
+        <p class="hero-service-area">
+          Serving <strong>Chicago</strong> and surrounding suburbs including
+          <!-- EDITABLE: List your specific service area suburbs here -->
+          Oak Park, Evanston, Naperville, Schaumburg, and beyond.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 2: TRUST & CREDENTIALS
+         ========================================================== -->
+    <section class="trust-section" id="trust" aria-labelledby="trust-heading">
+      <div class="container">
+        <h2 id="trust-heading" class="sr-only">Our Credentials and Trust Signals</h2>
+
+        <div class="trust-grid">
+
+          <!-- Trust Card: Veteran-Owned -->
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Veteran-Owned &amp; Operated</h3>
+            <p>Military precision and discipline applied to every inspection. You can count on us to be thorough, honest, and on time — every time.</p>
+          </div>
+
+          <!-- Trust Card: Google Rating -->
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3>4.9+ Google Rating</h3>
+            <p>Consistently top-rated by real buyers, sellers, and investors across Chicago and the surrounding suburbs. Our reputation is our business.</p>
+          </div>
+
+          <!-- Trust Card: Licensed -->
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><polyline points="9 11 12 14 22 4"/></svg>
+            </div>
+            <h3>Licensed Inspector</h3>
+            <!-- PLACEHOLDER: Add your actual license information below -->
+            <p>[PLACEHOLDER: License Information — e.g., "Illinois Licensed Home Inspector, License #XXXXXXXX"]</p>
+          </div>
+
+          <!-- Trust Card: Certified -->
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <h3>Certified Inspector</h3>
+            <!-- PLACEHOLDER: Add your actual certification information below -->
+            <p>[PLACEHOLDER: Certification Information — e.g., "InterNACHI Certified Home Inspector, ASHI Member"]</p>
+          </div>
+
+          <!-- Trust Card: Insured -->
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Fully Insured</h3>
+            <!-- PLACEHOLDER: Add your actual insurance information below -->
+            <p>[PLACEHOLDER: Insurance Information — e.g., "Fully insured with Errors &amp; Omissions and General Liability coverage"]</p>
+          </div>
+
+          <!-- Trust Card: Reports -->
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3>Reports Within 24–48 Hours</h3>
+            <p>Comprehensive, color-coded digital reports delivered fast so you never miss your contingency window. Clear findings, photos, and next steps.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 3: HOW IT WORKS — 3-STEP PROCESS
+         ========================================================== -->
+    <section class="process-section" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Simple &amp; Transparent</span>
+          <h2 id="process-heading">An Inspection in 3 Simple Steps</h2>
+          <p class="section-intro">From your first message to your final report — our process is designed to keep you fully informed and comfortably ahead of your contract contingency timeline.</p>
+        </div>
+
+        <div class="process-steps">
+
+          <!-- Step 1 -->
+          <div class="process-step" aria-labelledby="step-1-title">
+            <div class="process-step-number" aria-hidden="true">01</div>
+            <div class="process-step-content">
+              <div class="process-step-icon" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <h3 id="step-1-title">Request &amp; Quote</h3>
+              <p>Reach out via phone, text, or our contact form below. To provide you with an accurate quote as quickly as possible, please have three details ready: the property's approximate <strong>square footage</strong>, the <strong>year it was built</strong>, and your <strong>target closing date</strong>. That's all we need to confirm availability and get you scheduled without unnecessary back-and-forth.</p>
+              <a href="#contact" class="btn btn-outline process-step-cta">Request a Quote</a>
+            </div>
+          </div>
+
+          <!-- Connector -->
+          <div class="process-connector" aria-hidden="true"></div>
+
+          <!-- Step 2 -->
+          <div class="process-step" aria-labelledby="step-2-title">
+            <div class="process-step-number" aria-hidden="true">02</div>
+            <div class="process-step-content">
+              <div class="process-step-icon" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <h3 id="step-2-title">Comprehensive On-Site Inspection</h3>
+              <p>On inspection day, we conduct a thorough, multi-system walkthrough of the entire property — roof assembly and attic, foundation and structure, electrical panels and wiring, plumbing systems and water heaters, HVAC equipment and ductwork, insulation, windows, doors, decking, drainage, and every major visible system in between. This is not a surface-level pass. We look behind, above, and below — identifying what is working, what is aging, and what requires your immediate attention before closing.</p>
+              <div class="process-step-sample">
+                <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <div>
+                  <p class="process-step-sample-title">See What You're Getting</p>
+                  <p class="process-step-sample-desc">Our reports are clean, color-coded digital dashboards — easy to read, easy to share with your attorney or agent.</p>
+                  <!-- PLACEHOLDER: Replace the href below with the actual path to your sample PDF report -->
+                  <a href="#" class="btn btn-primary process-step-download" aria-label="Download a sample inspection report PDF">
+                    <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download Sample Report (PDF)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connector -->
+          <div class="process-connector" aria-hidden="true"></div>
+
+          <!-- Step 3 -->
+          <div class="process-step" aria-labelledby="step-3-title">
+            <div class="process-step-number" aria-hidden="true">03</div>
+            <div class="process-step-content">
+              <div class="process-step-icon" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3 id="step-3-title">Fast Report &amp; Review Call</h3>
+              <p>Your comprehensive digital report is delivered within <strong>24–48 hours</strong> of the inspection — well within the standard contingency windows built into most Illinois real estate contracts. The report includes detailed findings organized by system, priority-coded action items, embedded photos, and clear plain-language recommendations. We walk you through it on a review call so you understand exactly what you're looking at before you make any decisions.</p>
+              <a href="#contact" class="btn btn-outline process-step-cta">Get Started Today</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 4: ABOUT
+         ========================================================== -->
+    <section class="about-section" id="about" aria-labelledby="about-heading">
+      <div class="container about-inner">
+
+        <!-- About Visual: Property Icon Block -->
+        <div class="about-image-wrapper">
+          <div class="about-visual-block" role="img" aria-label="Reynolds Home Inspection — Veteran-Owned Property Assessment">
+            <div class="about-visual-inner">
+              <svg aria-hidden="true" focusable="false" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <p class="about-visual-label">Property Assessment<br>Specialists</p>
+              <div class="about-visual-badges">
+                <span class="about-visual-badge">
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  Licensed &amp; Insured
+                </span>
+                <span class="about-visual-badge">
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  4.9+ Rating
+                </span>
+                <span class="about-visual-badge">
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  Veteran-Owned
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Copy -->
+        <div class="about-copy">
+          <span class="section-label">About Reynolds</span>
+          <h2 id="about-heading">Built on Military Discipline. Focused on Protecting Your Investment.</h2>
+
+          <p>Buying or selling a property can be overwhelming, but you don't have to navigate it without a trusted advisor in your corner. At Reynolds Home Inspection, we serve as your eyes and ears on the property — walking you through every major system from the foundation to the ridgeline with the same operational thoroughness we brought to service.</p>
+
+          <p>Our veteran background means we bring disciplined, honest reporting and deep attention to detail to every engagement. We don't rush through inspections. We don't miss the things that matter. Our clients deserve a complete, objective picture of the property they're acquiring — before they commit to one of the largest financial decisions of their lives.</p>
+
+          <p>Our comprehensive services cover residential inspections, pre-listing evaluations, investment property assessments, and a full suite of premium ancillary testing services across Chicago and the surrounding suburbs. We pair exhaustive on-site diagnostics with easy-to-read digital reports, clear recommendations, and a review call to make sure nothing is left unclear.</p>
+
+          <!-- EDITABLE: Add your inspector's name and any real biographical details here -->
+          <p class="about-note">[PLACEHOLDER: Inspector Name &amp; Background — e.g., "Reynolds Home Inspection is founded and operated by [Name], a U.S. Army veteran with a background in construction and property assessment serving the Chicago metro area."]</p>
+
+          <div class="about-ctas">
+            <a href="#contact" class="btn btn-primary">Schedule an Inspection</a>
+            <a href="#services" class="btn btn-outline">View All Services</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 5: SERVICES — CORE + PREMIUM ADD-ONS
+         ========================================================== -->
+    <section class="services-section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What We Offer</span>
+          <h2 id="services-heading">Inspection Services for Chicago and the Surrounding Suburbs</h2>
+          <p class="section-intro">Whether you're buying your first home or growing a rental portfolio, Reynolds Home Inspection delivers the complete picture you need to move forward with confidence.</p>
+        </div>
+
+        <!-- Core Residential Services -->
+        <h3 class="services-subsection-label">Core Inspection Services</h3>
+        <div class="services-grid">
+
+          <!-- Service Card 1: Residential -->
+          <article class="service-card service-card--featured" aria-labelledby="service-1-title">
+            <div class="service-featured-badge">Most Requested</div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 id="service-1-title">Residential Buyer's Inspection</h3>
+            <p>A thorough, multi-system evaluation of the entire property — from the roof assembly and attic to the foundation and crawl space. We assess structural integrity, electrical systems, plumbing, HVAC, insulation, drainage, and dozens of additional components. You receive a complete, documented picture of what you're buying before you sign anything permanent.</p>
+            <a href="#contact" class="service-link" aria-label="Request a Residential Buyer's Inspection">
+              Request Inspection
+              <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <!-- Service Card 2: Pre-Listing -->
+          <article class="service-card" aria-labelledby="service-2-title">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 id="service-2-title">Pre-Listing Seller's Inspection</h3>
+            <p>Sellers who understand their property's condition before listing are better positioned to price accurately, negotiate with confidence, and avoid deal-killing surprises during the buyer's inspection period. We help you go to market fully prepared, with documentation that demonstrates transparency and builds buyer trust from day one.</p>
+            <a href="#contact" class="service-link" aria-label="Request a Pre-Listing Inspection">
+              Request Inspection
+              <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <!-- Service Card 3: Investment Property -->
+          <article class="service-card" aria-labelledby="service-3-title">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 id="service-3-title">Investment Property Inspection</h3>
+            <p>For landlords and portfolio investors acquiring additional doors, we provide objective, detailed assessments that help you evaluate deferred maintenance risk, estimate capital expenditure timelines, and protect your investment from unexpected costs. We speak your language — ROI, cap rate impact, and realistic repair prioritization.</p>
+            <a href="#contact" class="service-link" aria-label="Request an Investment Property Inspection">
+              Request Inspection
+              <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- Premium Add-On Services -->
+        <h3 class="services-subsection-label services-subsection-label--addon">Premium Ancillary Testing</h3>
+        <p class="services-addon-intro">These high-value add-on services protect you from the hidden hazards and underground liabilities that a standard inspection cannot see. Every one is available as a standalone or bundled with your core inspection for maximum efficiency and savings.</p>
+
+        <div class="services-grid services-grid--addon">
+
+          <!-- Radon -->
+          <article class="service-card service-card--addon" aria-labelledby="service-radon-title">
+            <div class="service-addon-accent" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 id="service-radon-title">Radon Gas Testing</h3>
+            <p>Radon is invisible, odorless, tasteless, and the second leading cause of lung cancer in the United States. It seeps naturally from the soil beneath a property and accumulates to dangerous levels indoors without any warning signs whatsoever. Sellers rarely conduct radon testing on their own initiative. For every buyer, regardless of home age or location, radon testing is strongly recommended by the EPA, the Illinois Emergency Management Agency, and every major inspection trade organization. We conduct certified radon testing and provide results and mitigation recommendations as part of your complete report.</p>
+            <a href="#contact" class="service-link" aria-label="Add Radon Gas Testing to your inspection">
+              Add to Your Inspection
+              <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <!-- Mold & IAQ -->
+          <article class="service-card service-card--addon" aria-labelledby="service-mold-title">
+            <div class="service-addon-accent" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 id="service-mold-title">Mold &amp; Indoor Air Quality (IAQ) Sampling</h3>
+            <p>Hidden moisture problems and elevated mold spore counts don't show up on a standard visual inspection — they hide behind drywall, inside attic cavities, beneath flooring, and in HVAC systems. By the time mold becomes visible, it frequently signals a larger, more costly moisture intrusion event already underway. Our certified mold and indoor air quality sampling identifies airborne particulate concentrations, pinpoints suspect moisture zones, and gives you the documentation you need to negotiate repairs before closing — or walk away from a property that poses a serious structural and health risk. Identifying these problems during your contingency window can save you tens of thousands of dollars in remediation costs after the fact.</p>
+            <a href="#contact" class="service-link" aria-label="Add Mold and IAQ Sampling to your inspection">
+              Add to Your Inspection
+              <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <!-- Sewer Scope -->
+          <article class="service-card service-card--addon" aria-labelledby="service-sewer-title">
+            <div class="service-addon-accent" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10h-10V2z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 id="service-sewer-title">Sewer Line Video Scope Inspection</h3>
+            <p>The sewer lateral line running from the home to the municipal connection is one of the single most expensive systems a property owner can face replacing — and it is entirely underground and completely invisible to a standard inspection. Tree root intrusion, pipe corrosion, offset joints, bellied sections, and collapsed lines are common in homes across the Chicago metro area, particularly in older neighborhoods where cast iron and clay tile pipes have been in the ground for 50 to 100 years. A camera-equipped sewer scope inspection looks directly inside the line, capturing real-time video evidence of the pipe's current condition. Catching a compromised sewer line before closing can save you between $5,000 and $25,000 or more in emergency excavation and replacement costs. This is one of the highest-value add-ons available for any buyer, and we recommend it for virtually every property inspection we perform.</p>
+            <a href="#contact" class="service-link" aria-label="Add Sewer Line Video Scope to your inspection">
+              Add to Your Inspection
+              <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- Services CTA -->
+        <div class="services-bottom-cta">
+          <p>Not sure which services are right for your property?</p>
+          <!-- EDITABLE: Update phone number here -->
+          <a href="tel:+15551234567" class="btn btn-primary">Call Us — We'll Help You Decide</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 6: REAL ESTATE AGENT & PROFESSIONAL PARTNER HUB
+         ========================================================== -->
+    <section class="agents-section" id="agents" aria-labelledby="agents-heading">
+      <div class="container">
+        <div class="agents-inner">
+
+          <div class="agents-copy">
+            <span class="section-label">For Real Estate Professionals</span>
+            <h2 id="agents-heading">A Trusted, Objective Partner for Every Transaction You Close</h2>
+
+            <p>Reynolds Home Inspection works alongside real estate agents and transaction attorneys to help buyers make educated, confident decisions — and to keep deals moving cleanly toward closing. We understand the timelines, the contingency dynamics, and the pressure that everyone in a transaction feels when the inspection report hits.</p>
+
+            <p>Our approach is exhaustively thorough and completely objective. We call out what we see — factually, clearly, and without alarm. We are not in the business of derailing transactions. We are in the business of making sure your clients understand the property they are acquiring so they can negotiate from a position of knowledge, not fear. That approach makes for smoother closings, better-informed buyers, and fewer post-closing disputes for everyone involved.</p>
+
+            <p>Agents who work with us regularly tell us the same thing: their clients feel cared for, the report is something they can actually use, and the whole experience reflects positively on the agent's professionalism. That is precisely the outcome we aim for on every engagement.</p>
+
+            <div class="agents-highlights">
+              <div class="agents-highlight-item">
+                <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Reports delivered within 24–48 hours to keep your timeline intact</span>
+              </div>
+              <div class="agents-highlight-item">
+                <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Objective, factual findings — no alarmist language, no deal-spooking hyperbole</span>
+              </div>
+              <div class="agents-highlight-item">
+                <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Clean, professional reports your clients can share with attorneys and contractors</span>
+              </div>
+              <div class="agents-highlight-item">
+                <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Veteran-owned reliability — we show up, we're thorough, and we communicate clearly</span>
+              </div>
+            </div>
+
+            <div class="agents-ctas">
+              <a href="#contact" class="btn btn-primary">Set Up a Referral Relationship</a>
+              <a href="tel:+15551234567" class="btn btn-outline">Call to Discuss Partnership</a>
+            </div>
+          </div>
+
+          <div class="agents-visual" aria-hidden="true">
+            <div class="agents-stat-block">
+              <div class="agents-stat">
+                <span class="agents-stat-value">24–48hr</span>
+                <span class="agents-stat-label">Report Turnaround</span>
+              </div>
+              <div class="agents-stat">
+                <span class="agents-stat-value">4.9+</span>
+                <span class="agents-stat-label">Google Rating</span>
+              </div>
+              <div class="agents-stat">
+                <span class="agents-stat-value">100%</span>
+                <span class="agents-stat-label">Objective &amp; Factual</span>
+              </div>
+              <div class="agents-stat">
+                <span class="agents-stat-value">IL</span>
+                <span class="agents-stat-label">State Licensed</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 7: TESTIMONIALS
+         ========================================================== -->
+    <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Client Reviews</span>
+          <h2 id="testimonials-heading">What Our Clients Say</h2>
+        </div>
+
+        <!--
+        PLACEHOLDER NOTICE:
+        The testimonials below are placeholders. Replace [CLIENT NAME], [CLIENT ROLE],
+        and [CLIENT TESTIMONIAL] with real reviews from actual clients.
+        Do NOT publish placeholder testimonials on a live website.
+        Consider requesting reviews via Google Business Profile, Yelp, or Angi.
+        -->
+        <div class="testimonials-placeholder-notice" role="note" aria-label="Placeholder notice">
+          <strong>&#9888; Developer Note:</strong> The testimonials below are placeholders. Replace with real client reviews before publishing.
+        </div>
+
+        <div class="testimonials-grid">
+
+          <!-- Testimonial Card 1 -->
+          <blockquote class="testimonial-card" aria-label="Testimonial from [CLIENT NAME]">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars" role="img">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p class="testimonial-quote">"[CLIENT TESTIMONIAL — e.g., Reynolds didn't just hand me a report — they walked me through every single finding and made sure I understood exactly what I was buying. That education gave me the confidence to close knowing I had zero surprises waiting for me.]"</p>
+            <footer class="testimonial-footer">
+              <span class="testimonial-name">[CLIENT NAME]</span>
+              <span class="testimonial-role">[CLIENT ROLE — e.g., First-Time Homebuyer, Oak Park, IL]</span>
+            </footer>
+          </blockquote>
+
+          <!-- Testimonial Card 2 -->
+          <blockquote class="testimonial-card" aria-label="Testimonial from [CLIENT NAME]">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars" role="img">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p class="testimonial-quote">"[CLIENT TESTIMONIAL — e.g., As a real estate agent, I need inspectors I can trust to be thorough, professional, and straight-down-the-middle objective. Reynolds is always my first call for buyers in the Chicago area. Their reports are the best in the business.]"</p>
+            <footer class="testimonial-footer">
+              <span class="testimonial-name">[CLIENT NAME]</span>
+              <span class="testimonial-role">[CLIENT ROLE — e.g., Licensed Real Estate Agent, Chicago Metro]</span>
+            </footer>
+          </blockquote>
+
+          <!-- Testimonial Card 3 -->
+          <blockquote class="testimonial-card" aria-label="Testimonial from [CLIENT NAME]">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars" role="img">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p class="testimonial-quote">"[CLIENT TESTIMONIAL — e.g., The sewer scope add-on they recommended caught a major root intrusion issue that would have cost us $18,000 to fix after closing. That single recommendation saved us the inspection fee ten times over. Absolute professionals.]"</p>
+            <footer class="testimonial-footer">
+              <span class="testimonial-name">[CLIENT NAME]</span>
+              <span class="testimonial-role">[CLIENT ROLE — e.g., Real Estate Investor, Chicago, IL]</span>
+            </footer>
+          </blockquote>
+
+        </div>
+
+        <div class="testimonials-cta">
+          <!-- EDITABLE: Update phone number here -->
+          <a href="#contact" class="btn btn-primary">Schedule Your Inspection</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 8: CONTACT
+         ========================================================== -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-inner">
+
+        <!-- Contact Info Side -->
+        <div class="contact-info">
+          <span class="section-label">Get In Touch</span>
+          <h2 id="contact-heading">Ready to Schedule Your Inspection?</h2>
+          <p>We serve homebuyers, sellers, real estate agents, and investors throughout Chicago and the surrounding suburbs. Call us, send a text, or fill out the form and we'll be in touch promptly.</p>
+
+          <!-- Operational Transparency Notice -->
+          <div class="contact-transparency-notice" role="note" aria-label="Important phone availability notice">
+            <div class="contact-transparency-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <p class="contact-transparency-text">Please note: We do not answer phone calls while actively performing an inspection. Every client pays for and deserves our uninterrupted focus and complete attention. Please leave a voicemail or send a text message, and we will respond immediately following the walkthrough.</p>
+            </div>
+          </div>
+
+          <div class="contact-details">
+
+            <!-- Phone -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.01-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.25v-.33z"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Phone / Text</p>
+                <!-- EDITABLE: Update phone number here -->
+                <a href="tel:+15551234567" class="contact-value contact-value--link">+1 (555) 123-4567</a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Email</p>
+                <!-- EDITABLE: Update email here -->
+                <a href="mailto:hello@examplebusiness.com" class="contact-value contact-value--link">hello@examplebusiness.com</a>
+              </div>
+            </div>
+
+            <!-- Service Area -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Service Area</p>
+                <p class="contact-value">Chicago and Surrounding Suburbs, IL</p>
+              </div>
+            </div>
+
+            <!-- Hours -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Business Hours</p>
+                <!-- PLACEHOLDER: Update with actual business hours -->
+                <p class="contact-value">[PLACEHOLDER: Business Hours — e.g., Monday–Saturday, 8:00 AM – 6:00 PM]</p>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div>
+                <p class="contact-label">Office</p>
+                <!-- PLACEHOLDER: Update with actual business address if applicable -->
+                <p class="contact-value">[PLACEHOLDER: Business Address]<br>Chicago, IL</p>
+              </div>
+            </div>
+
+          </div><!-- /contact-details -->
+        </div><!-- /contact-info -->
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+            <h3>Send Us a Message</h3>
+
+            <!-- Name -->
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="Your full name"
+                required
+                autocomplete="name"
+                aria-required="true"
+                aria-describedby="name-error"
+              >
+              <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="your@email.com"
+                required
+                autocomplete="email"
+                aria-required="true"
+                aria-describedby="email-error"
+              >
+              <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <!-- Phone (Optional) -->
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number <span class="optional-label">(optional)</span></label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form-input"
+                placeholder="(555) 000-0000"
+                autocomplete="tel"
+              >
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="message" class="form-label">Message <span class="required-mark" aria-hidden="true">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-input form-textarea"
+                placeholder="Tell us about the property — address, square footage, year built, and your closing date if you have one. Let us know which services you're interested in."
+                required
+                aria-required="true"
+                aria-describedby="message-error"
+                rows="5"
+              ></textarea>
+              <span class="form-error" id="message-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary btn-block">
+              Send Message
+            </button>
+
+            <!-- Success / Error message display area -->
+            <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <!-- EDITABLE: Business name in footer -->
+        <p class="footer-logo">Reynolds Home Inspection</p>
+        <p class="footer-tagline">Veteran-Owned. Detail-Driven. Chicago's Trusted Inspection Partner.</p>
+        <div class="footer-contact">
+          <!-- EDITABLE: Update phone and email here -->
+          <a href="tel:+15551234567" class="footer-contact-link">+1 (555) 123-4567</a>
+          <span aria-hidden="true"> · </span>
+          <a href="mailto:hello@examplebusiness.com" class="footer-contact-link">hello@examplebusiness.com</a>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Navigation</h4>
+        <ul role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#agents">For Agents</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-services">
+        <h4>Services</h4>
+        <ul role="list">
+          <li><a href="#services">Residential Buyer's Inspection</a></li>
+          <li><a href="#services">Pre-Listing Seller's Inspection</a></li>
+          <li><a href="#services">Investment Property Inspection</a></li>
+          <li><a href="#services">Radon Gas Testing</a></li>
+          <li><a href="#services">Mold &amp; IAQ Sampling</a></li>
+          <li><a href="#services">Sewer Line Video Scope</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-area">
+        <h4>Service Area</h4>
+        <!-- EDITABLE: Update service area suburbs as needed -->
+        <p>Chicago and Surrounding Suburbs, IL</p>
+        <!-- PLACEHOLDER: Add specific suburbs if desired -->
+        <p class="footer-suburbs">[PLACEHOLDER: Specific suburbs served — e.g., Oak Park, Evanston, Naperville, Schaumburg, Joliet, Elgin, and more]</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>
+          &copy; <span id="currentYear"></span> Reynolds Home Inspection. All rights reserved.
+          <!-- PLACEHOLDER: Replace with actual address once known -->
+          · [PLACEHOLDER: Business Address] · Chicago, IL
+        </p>
+        <p class="footer-veteran">&#127482;&#127480; Proudly Veteran-Owned &amp; Operated</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       STICKY MOBILE CALL BUTTON
+       (Visible on mobile only — helps drive phone calls)
+       ============================================================ -->
+  <!-- EDITABLE: Update phone number in href below -->
+  <a href="tel:+15551234567" class="sticky-call-btn" aria-label="Call Reynolds Home Inspection now">
+    <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.01-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.25v-.33z"/></svg>
+    Call Now — (555) 123-4567
+  </a>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
