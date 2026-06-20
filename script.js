@@ -213,7 +213,7 @@
      - Required field validation
      - Email format validation
      - Inline error messages with ARIA
-     - Success message on submission (no backend)
+     - Submits contact form to Formspree
   ========================================================== */
 
   var form = qs('#contactForm');
@@ -333,33 +333,51 @@
         return;
       }
 
-      // Disable submit button during "processing"
+      // Disable submit button during processing
       var submitBtn = form.querySelector('[type="submit"]');
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending…';
       }
 
-      // Simulate async submission (replace with real backend call)
-      setTimeout(function () {
-        // Success
-        if (formStatus) {
-          formStatus.className = 'form-status is-success';
-          formStatus.style.display = 'block';
-          formStatus.textContent =
-            'Thank you! We\'ll contact you within 24 hours. (Demo mode — integrate real backend later)';
-          formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
+      // Submit to Formspree
+      var formAction = form.getAttribute('action') || 'https://formspree.io/f/mwvjggye';
 
-        // Reset form
-        form.reset();
+      fetch(formAction, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: new FormData(form)
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error('Form submission failed.');
+          }
 
-        // Re-enable submit
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Send Message';
-        }
-      }, 800);
+          if (formStatus) {
+            formStatus.className = 'form-status is-success';
+            formStatus.style.display = 'block';
+            formStatus.textContent = 'Thank you! We\'ll contact you within 24 hours.';
+            formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+
+          form.reset();
+        })
+        .catch(function () {
+          if (formStatus) {
+            formStatus.className = 'form-status is-error-msg';
+            formStatus.style.display = 'block';
+            formStatus.textContent = 'Something went wrong. Please call or text us directly at (773) 547-0434.';
+            formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+          }
+        });
     });
   }
 
