@@ -5,18 +5,13 @@
   ============================================================
   BUSINESS OPERATIONS NOTES — Reynolds Home Inspection
   ============================================================
-  This website was built for lead generation. To update:
-  - Phone: Search for "+1 (773) 547-0434" and replace all instances
-  - Email: Search for "hello@examplebusiness.com" and replace all
-  - Business address: Search for "[PLACEHOLDER: Business Address]"
-  - Credentials: Search for "[PLACEHOLDER:" to find all placeholders
-  - Testimonials: Search for "[CLIENT NAME]" to find testimonial cards
-
-  To go live:
-  1. Update all placeholders marked with [PLACEHOLDER: ...]
-  2. Replace MEASUREMENT_ID in the Google Analytics snippet (bottom)
-  3. Connect a form backend (Formspree or Netlify Forms — see README)
-  4. Deploy to Netlify (see README for instructions)
+  - Phone: search for "+1 (773) 547-0434" / "tel:+17735470434"
+  - Email: search for "info@reynoldsinspectionservices.com"
+  - License #: Trust section "Licensed Inspector" card
+  - Hours: contact section + JSON-LD "openingHours"
+  - Live domain: https://reynoldsinspectionservices.com/
+  - Form backend: Formspree (see <form action> and script.js)
+  - Reviews: add a testimonials section only with real, permissioned reviews
   ============================================================
   -->
 
@@ -24,27 +19,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reynolds Home Inspection | Veteran-Owned Asset Protection Inspections in Chicago</title>
-  <meta name="description" content="Reynolds Home Inspection is a veteran-owned property inspection company serving Chicago and surrounding suburbs. Thorough, educational inspections for buyers and investors. Radon, mold, sewer scope, and more. Call +1 (773) 547-0434.">
+  <meta name="description" content="Reynolds Home Inspection is a veteran-owned property inspection company serving Chicago and surrounding suburbs. Thorough, educational inspections for buyers and investors. Mold and sewer scope testing, and more. Inspections by appointment. Call +1 (773) 547-0434.">
 
   <!-- ===================== SEO: Canonical ===================== -->
-  <!-- PLACEHOLDER: Replace with your live domain -->
-  <link rel="canonical" href="https://reynoldsinspectionservices.com.com/">
+  <link rel="canonical" href="https://reynoldsinspectionservices.com/">
 
   <!-- ===================== SEO: Open Graph ===================== -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Reynolds Home Inspection | Veteran-Owned Asset Protection Inspections in Chicago">
   <meta property="og:description" content="Deep-dive property inspections for buyers and investors across Chicago and the suburbs. Not a checklist — a complete education on your property.">
-  <meta property="og:url" content="https://[PLACEHOLDER-YOUR-DOMAIN].com/">
-  <!-- PLACEHOLDER: Replace with actual OG image (1200x630px recommended) -->
-  <meta property="og:image" content="https://[PLACEHOLDER-YOUR-DOMAIN].com/og-image.jpg">
+  <meta property="og:url" content="https://reynoldsinspectionservices.com/">
+  <meta property="og:image" content="https://reynoldsinspectionservices.com/og-image.jpg">
   <meta property="og:site_name" content="Reynolds Home Inspection">
 
   <!-- ===================== SEO: Twitter Card ===================== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Reynolds Home Inspection | Veteran-Owned Asset Protection Inspections in Chicago">
   <meta name="twitter:description" content="Deep-dive property inspections for buyers and investors across Chicago and the suburbs. Not a checklist — a complete education on your property.">
-  <!-- PLACEHOLDER: Replace with actual Twitter image -->
-  <meta name="twitter:image" content="https://[PLACEHOLDER-YOUR-DOMAIN].com/og-image.jpg">
+  <meta name="twitter:image" content="https://reynoldsinspectionservices.com/og-image.jpg">
 
   <!-- ===================== Local SEO: JSON-LD Schema ===================== -->
   <script type="application/ld+json">
@@ -52,8 +44,8 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Reynolds Home Inspection",
-    "description": "Veteran-owned property inspection company serving Chicago and surrounding suburbs. Residential, pre-listing, investment, radon, mold, and sewer scope inspections.",
-    "url": "https://[PLACEHOLDER-YOUR-DOMAIN].com/",
+    "description": "Veteran-owned property inspection company serving Chicago and surrounding suburbs. Residential, pre-listing, investment, mold, and sewer scope inspections, by appointment.",
+    "url": "https://reynoldsinspectionservices.com/",
     "telephone": "+17735470434",
     "email": "info@reynoldsinspectionservices.com",
     "areaServed": [
@@ -64,14 +56,8 @@
       "Lake County",
       "Will County"
     ],
-    "openingHours": "Business Hours e.g. Mo-Fr 08:00-18:00",
+    "openingHours": "Mo-Fr 08:00-17:00",
     "priceRange": "$$",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "bestRating": "5",
-      "reviewCount": "100"
-    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Inspection Services",
@@ -79,7 +65,6 @@
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Property Inspections"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pre-Listing Inspections"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Investment Property Inspections"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Radon Gas Testing"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mold & Indoor Air Quality Sampling"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sewer Line Video Scope Inspection"}}
       ]
@@ -140,7 +125,6 @@
           <li><a href="#process">How It Works</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#agents">For Agents</a></li>
-          <li><a href="#testimonials">Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -175,7 +159,6 @@
         <li><a href="#process" class="mobile-nav-link">How It Works</a></li>
         <li><a href="#services" class="mobile-nav-link">Services</a></li>
         <li><a href="#agents" class="mobile-nav-link">For Agents</a></li>
-        <li><a href="#testimonials" class="mobile-nav-link">Reviews</a></li>
         <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
         <li>
           <!-- EDITABLE: Update phone number here -->
@@ -216,11 +199,11 @@
         <div class="hero-trust-badges" aria-label="Trust credentials">
           <div class="hero-trust-badge">
             <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <span><strong>4.9+ Google Rating</strong></span>
+            <span><strong>Licensed Illinois Home Inspector</strong></span>
           </div>
           <div class="hero-trust-badge">
             <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Fully Licensed, Insured &amp; Certified</span>
+            <span>By Appointment · Mon–Fri, 8 AM – 5 PM</span>
           </div>
         </div>
 
@@ -263,13 +246,13 @@
             <p>Military precision and discipline applied to every inspection. You can count on us to be thorough, honest, and on time — every time.</p>
           </div>
 
-          <!-- Trust Card: Google Rating -->
+          <!-- Trust Card: By Appointment -->
           <div class="trust-card">
             <div class="trust-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             </div>
-            <h3>4.9+ Google Rating</h3>
-            <p>Consistently top-rated by real buyers, sellers, and investors across Chicago and the surrounding suburbs. Our reputation is our business.</p>
+            <h3>Inspections by Appointment</h3>
+            <p>Every inspection is scheduled in advance so your property gets our full, uninterrupted attention. Monday–Friday, 8:00 AM – 5:00 PM, with weekends available by appointment.</p>
           </div>
 
           <!-- Trust Card: Licensed -->
@@ -278,28 +261,25 @@
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><polyline points="9 11 12 14 22 4"/></svg>
             </div>
             <h3>Licensed Inspector</h3>
-            <!-- PLACEHOLDER: Add your actual license information below -->
-            <p>[PLACEHOLDER: License Information — e.g., "Illinois Licensed Home Inspector, License #XXXXXXXX"]</p>
+            <p>Illinois Licensed Home Inspector, License #450012531</p>
           </div>
 
-          <!-- Trust Card: Certified -->
+          <!-- Trust Card: Service Area -->
           <div class="trust-card">
             <div class="trust-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
-            <h3>Certified Inspector</h3>
-            <!-- PLACEHOLDER: Add your actual certification information below -->
-            <p>[PLACEHOLDER: Certification Information — e.g., "InterNACHI Certified Home Inspector, ASHI Member"]</p>
+            <h3>Chicago &amp; Suburbs</h3>
+            <p>Serving Cook, DuPage, Lake, and Will counties and the surrounding area.</p>
           </div>
 
-          <!-- Trust Card: Insured -->
+          <!-- Trust Card: Walkthrough -->
           <div class="trust-card">
             <div class="trust-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </div>
-            <h3>Fully Insured</h3>
-            <!-- PLACEHOLDER: Add your actual insurance information below -->
-            <p>[PLACEHOLDER: Insurance Information — e.g., "Fully insured with Errors &amp; Omissions and General Liability coverage"]</p>
+            <h3>Multi-System Walkthrough</h3>
+            <p>Roof to foundation: structure, electrical, plumbing, HVAC, insulation, and drainage, documented in one report.</p>
           </div>
 
           <!-- Trust Card: Reports -->
@@ -337,6 +317,7 @@
               </div>
               <h3 id="step-1-title">Request &amp; Quote</h3>
               <p>Reach out via phone, text, or our contact form below. To provide you with an accurate quote as quickly as possible, please have three details ready: the property's approximate <strong>square footage</strong>, the <strong>year it was built</strong>, and your <strong>target closing date</strong>. That's all we need to confirm availability and get you scheduled without unnecessary back-and-forth.</p>
+              <p class="process-step-note"><strong>Inspections are by appointment only:</strong> Monday–Friday, 8:00 AM – 5:00 PM, with weekends available by appointment.</p>
               <a href="#contact" class="btn btn-outline process-step-cta">Request a Quote</a>
             </div>
           </div>
@@ -356,13 +337,8 @@
               <div class="process-step-sample">
                 <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                 <div>
-                  <p class="process-step-sample-title">See What You're Getting</p>
-                  <p class="process-step-sample-desc">Our reports are clean, color-coded digital dashboards — easy to read, easy to share with your attorney or agent.</p>
-                  <!-- PLACEHOLDER: Replace the href below with the actual path to your sample PDF report -->
-                  <a href="#" class="btn btn-primary process-step-download" aria-label="Download a sample inspection report PDF">
-                    <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    Download Sample Report (PDF)
-                  </a>
+                  <p class="process-step-sample-title">What's in Your Report</p>
+                  <p class="process-step-sample-desc">Color-coded findings, embedded photos, and plain-language recommendations — easy to read and easy to share with your attorney or agent.</p>
                 </div>
               </div>
             </div>
@@ -403,11 +379,11 @@
               <div class="about-visual-badges">
                 <span class="about-visual-badge">
                   <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  Licensed &amp; Insured
+                  Licensed Inspector
                 </span>
                 <span class="about-visual-badge">
                   <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  4.9+ Rating
+                  By Appointment
                 </span>
                 <span class="about-visual-badge">
                   <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -427,10 +403,10 @@
 
           <p>Our veteran background means we bring disciplined, honest reporting and deep attention to detail to every engagement. We don't rush through inspections. We don't miss the things that matter. Our clients deserve a complete, objective picture of the property they're acquiring — before they commit to one of the largest financial decisions of their lives.</p>
 
-          <p>Our comprehensive services cover residential inspections, pre-listing evaluations, investment property assessments, and a full suite of premium ancillary testing services across Chicago and the surrounding suburbs. We pair exhaustive on-site diagnostics with easy-to-read digital reports, clear recommendations, and a review call to make sure nothing is left unclear.</p>
+          <p>Our comprehensive services cover residential inspections, pre-listing evaluations, investment property assessments, and mold and sewer scope add-on testing across Chicago and the surrounding suburbs. We pair exhaustive on-site diagnostics with easy-to-read digital reports, clear recommendations, and a review call to make sure nothing is left unclear.</p>
 
           <!-- EDITABLE: Add your inspector's name and any real biographical details here -->
-          <p class="about-note">Inspector Name &amp; Background — e.g., "Reynolds Home Inspection is founded and operated by [Name]Che Reynolds, a U.S. Army veteran with a background in construction and property assessment serving the Chicago metro area."</p>
+          <p class="about-note">Reynolds Home Inspection is founded and operated by Che Reynolds, a U.S. Army veteran serving the Chicago metro area.</p>
 
           <div class="about-ctas">
             <a href="#contact" class="btn btn-primary">Schedule an Inspection</a>
@@ -458,7 +434,7 @@
 
           <!-- Service Card 1: Residential -->
           <article class="service-card service-card--featured" aria-labelledby="service-1-title">
-            <div class="service-featured-badge">Most Requested</div>
+            <div class="service-featured-badge">Core Inspection</div>
             <div class="service-icon" aria-hidden="true">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             </div>
@@ -500,23 +476,9 @@
 
         <!-- Premium Add-On Services -->
         <h3 class="services-subsection-label services-subsection-label--addon">Premium Ancillary Testing</h3>
-        <p class="services-addon-intro">These high-value add-on services protect you from the hidden hazards and underground liabilities that a standard inspection cannot see. Every one is available as a standalone or bundled with your core inspection for maximum efficiency and savings.</p>
+        <p class="services-addon-intro">These high-value add-on services protect you from the hidden hazards and underground liabilities that a standard inspection cannot see. Both are available as a standalone or bundled with your core inspection for maximum efficiency and savings.</p>
 
         <div class="services-grid services-grid--addon">
-
-          <!-- Radon -->
-          <article class="service-card service-card--addon" aria-labelledby="service-radon-title">
-            <div class="service-addon-accent" aria-hidden="true"></div>
-            <div class="service-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3 id="service-radon-title">Radon Gas Testing</h3>
-            <p>Radon is invisible, odorless, tasteless, and the second leading cause of lung cancer in the United States. It seeps naturally from the soil beneath a property and accumulates to dangerous levels indoors without any warning signs whatsoever. Sellers rarely conduct radon testing on their own initiative. For every buyer, regardless of home age or location, radon testing is strongly recommended by the EPA, the Illinois Emergency Management Agency, and every major inspection trade organization. We conduct certified radon testing and provide results and mitigation recommendations as part of your complete report.</p>
-            <a href="#contact" class="service-link" aria-label="Add Radon Gas Testing to your inspection">
-              Add to Your Inspection
-              <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
 
           <!-- Mold & IAQ -->
           <article class="service-card service-card--addon" aria-labelledby="service-mold-title">
@@ -525,7 +487,7 @@
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </div>
             <h3 id="service-mold-title">Mold &amp; Indoor Air Quality (IAQ) Sampling</h3>
-            <p>Hidden moisture problems and elevated mold spore counts don't show up on a standard visual inspection — they hide behind drywall, inside attic cavities, beneath flooring, and in HVAC systems. By the time mold becomes visible, it frequently signals a larger, more costly moisture intrusion event already underway. Our certified mold and indoor air quality sampling identifies airborne particulate concentrations, pinpoints suspect moisture zones, and gives you the documentation you need to negotiate repairs before closing — or walk away from a property that poses a serious structural and health risk. Identifying these problems during your contingency window can save you tens of thousands of dollars in remediation costs after the fact.</p>
+            <p>Hidden moisture problems and elevated mold spore counts don't show up on a standard visual inspection — they hide behind drywall, inside attic cavities, beneath flooring, and in HVAC systems. By the time mold becomes visible, it frequently signals a larger, more costly moisture intrusion event already underway. Our mold and indoor air quality sampling identifies airborne particulate concentrations, pinpoints suspect moisture zones, and gives you the documentation you need to negotiate repairs before closing — or walk away from a property that poses a serious structural and health risk. Identifying these problems during your contingency window can save you thousands of dollars in remediation costs after the fact.</p>
             <a href="#contact" class="service-link" aria-label="Add Mold and IAQ Sampling to your inspection">
               Add to Your Inspection
               <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -539,7 +501,7 @@
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10h-10V2z"/><circle cx="12" cy="12" r="3"/></svg>
             </div>
             <h3 id="service-sewer-title">Sewer Line Video Scope Inspection</h3>
-            <p>The sewer lateral line running from the home to the municipal connection is one of the single most expensive systems a property owner can face replacing — and it is entirely underground and completely invisible to a standard inspection. Tree root intrusion, pipe corrosion, offset joints, bellied sections, and collapsed lines are common in homes across the Chicago metro area, particularly in older neighborhoods where cast iron and clay tile pipes have been in the ground for 50 to 100 years. A camera-equipped sewer scope inspection looks directly inside the line, capturing real-time video evidence of the pipe's current condition. Catching a compromised sewer line before closing can save you between $5,000 and $25,000 or more in emergency excavation and replacement costs. This is one of the highest-value add-ons available for any buyer, and we recommend it for virtually every property inspection we perform.</p>
+            <p>The sewer lateral line running from the home to the municipal connection is one of the single most expensive systems a property owner can face replacing — and it is entirely underground and completely invisible to a standard inspection. Tree root intrusion, pipe corrosion, offset joints, bellied sections, and collapsed lines are common in homes across the Chicago metro area, particularly in older neighborhoods where cast iron and clay tile pipes have been in the ground for 50 to 100 years. A camera-equipped sewer scope inspection looks directly inside the line, capturing real-time video evidence of the pipe's current condition. Catching a compromised sewer line before closing can save you thousands of dollars in emergency excavation and replacement costs. This is one of the highest-value add-ons available for any buyer, and we recommend it for virtually every property inspection we perform.</p>
             <a href="#contact" class="service-link" aria-label="Add Sewer Line Video Scope to your inspection">
               Add to Your Inspection
               <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -573,7 +535,7 @@
 
             <p>Our approach is exhaustively thorough and completely objective. We call out what we see — factually, clearly, and without alarm. We are not in the business of derailing transactions. We are in the business of making sure your clients understand the property they are acquiring so they can negotiate from a position of knowledge, not fear. That approach makes for smoother closings, better-informed buyers, and fewer post-closing disputes for everyone involved.</p>
 
-            <p>Agents who work with us regularly tell us the same thing: their clients feel cared for, the report is something they can actually use, and the whole experience reflects positively on the agent's professionalism. That is precisely the outcome we aim for on every engagement.</p>
+            <p>That is the outcome we aim for on every engagement: your clients feel cared for, the report is something they can actually use, and the whole experience reflects positively on your professionalism.</p>
 
             <div class="agents-highlights">
               <div class="agents-highlight-item">
@@ -607,12 +569,12 @@
                 <span class="agents-stat-label">Report Turnaround</span>
               </div>
               <div class="agents-stat">
-                <span class="agents-stat-value">4.9+</span>
-                <span class="agents-stat-label">Google Rating</span>
+                <span class="agents-stat-value">M–F</span>
+                <span class="agents-stat-label">8 AM – 5 PM</span>
               </div>
               <div class="agents-stat">
-                <span class="agents-stat-value">100%</span>
-                <span class="agents-stat-label">Objective &amp; Factual</span>
+                <span class="agents-stat-value">Weekends</span>
+                <span class="agents-stat-label">By Appointment</span>
               </div>
               <div class="agents-stat">
                 <span class="agents-stat-value">IL</span>
@@ -622,75 +584,6 @@
           </div>
 
         </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================
-         SECTION 7: TESTIMONIALS
-         ========================================================== -->
-    <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Client Reviews</span>
-          <h2 id="testimonials-heading">What Our Clients Say</h2>
-        </div>
-
-        <!--
-        PLACEHOLDER NOTICE:
-        The testimonials below are placeholders. Replace [CLIENT NAME], [CLIENT ROLE],
-        and [CLIENT TESTIMONIAL] with real reviews from actual clients.
-        Do NOT publish placeholder testimonials on a live website.
-        Consider requesting reviews via Google Business Profile, Yelp, or Angi.
-        
-        <div class="testimonials-placeholder-notice" role="note" aria-label="Placeholder notice">
-          <strong>&#9888; Developer Note:</strong> The testimonials below are placeholders. Replace with real client reviews before publishing.
-        </div>
--->
-        <div class="testimonials-grid">
-
-          <!-- Testimonial Card 1 -->
-          <blockquote class="testimonial-card" aria-label="Testimonial from [CLIENT NAME]">
-            <div class="testimonial-stars" aria-label="5 out of 5 stars" role="img">
-              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            </div>
-            <p class="testimonial-quote">"[CLIENT TESTIMONIAL — e.g., Reynolds didn't just hand me a report — they walked me through every single finding and made sure I understood exactly what I was buying. That education gave me the confidence to close knowing I had zero surprises waiting for me.]"</p>
-            <footer class="testimonial-footer">
-              <span class="testimonial-name">[CLIENT NAME]</span>
-              <span class="testimonial-role">[CLIENT ROLE — e.g., First-Time Homebuyer, Oak Park, IL]</span>
-            </footer>
-          </blockquote>
-
-          <!-- Testimonial Card 2 -->
-          <blockquote class="testimonial-card" aria-label="Testimonial from [CLIENT NAME]">
-            <div class="testimonial-stars" aria-label="5 out of 5 stars" role="img">
-              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            </div>
-            <p class="testimonial-quote">"[CLIENT TESTIMONIAL — e.g., As a real estate agent, I need inspectors I can trust to be thorough, professional, and straight-down-the-middle objective. Reynolds is always my first call for buyers in the Chicago area. Their reports are the best in the business.]"</p>
-            <footer class="testimonial-footer">
-              <span class="testimonial-name">[CLIENT NAME]</span>
-              <span class="testimonial-role">[CLIENT ROLE — e.g., Licensed Real Estate Agent, Chicago Metro]</span>
-            </footer>
-          </blockquote>
-
-          <!-- Testimonial Card 3 -->
-          <blockquote class="testimonial-card" aria-label="Testimonial from [CLIENT NAME]">
-            <div class="testimonial-stars" aria-label="5 out of 5 stars" role="img">
-              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            </div>
-            <p class="testimonial-quote">"[CLIENT TESTIMONIAL — e.g., The sewer scope add-on they recommended caught a major root intrusion issue that would have cost us $18,000 to fix after closing. That single recommendation saved us the inspection fee ten times over. Absolute professionals.]"</p>
-            <footer class="testimonial-footer">
-              <span class="testimonial-name">[CLIENT NAME]</span>
-              <span class="testimonial-role">[CLIENT ROLE — e.g., Real Estate Investor, Chicago, IL]</span>
-            </footer>
-          </blockquote>
-
-        </div>
-
-        <div class="testimonials-cta">
-          <!-- EDITABLE: Update phone number here -->
-          <a href="#contact" class="btn btn-primary">Schedule Your Inspection</a>
-        </div>
-
       </div>
     </section>
 
@@ -760,8 +653,7 @@
               </div>
               <div>
                 <p class="contact-label">Business Hours</p>
-                <!-- PLACEHOLDER: Update with actual business hours -->
-                <p class="contact-value">Business Hours — e.g., Monday–Saturday, 8:00 AM – 6:00 PM</p>
+                <p class="contact-value">Monday–Friday, 8:00 AM – 5:00 PM<br>Weekends available by appointment<br>Inspections by appointment only</p>
               </div>
             </div>
 
@@ -878,7 +770,6 @@
           <li><a href="#process">How It Works</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#agents">For Agents</a></li>
-          <li><a href="#testimonials">Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -889,7 +780,6 @@
           <li><a href="#services">Residential Buyer's Inspection</a></li>
           <li><a href="#services">Pre-Listing Seller's Inspection</a></li>
           <li><a href="#services">Investment Property Inspection</a></li>
-          <li><a href="#services">Radon Gas Testing</a></li>
           <li><a href="#services">Mold &amp; IAQ Sampling</a></li>
           <li><a href="#services">Sewer Line Video Scope</a></li>
         </ul>

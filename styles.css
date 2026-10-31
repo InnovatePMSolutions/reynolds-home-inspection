@@ -1802,7 +1802,7 @@ p:last-child { margin-bottom: 0; }
 
   /* Services: 3 columns */
   .services-grid { grid-template-columns: repeat(3, 1fr); }
-  .services-grid--addon { grid-template-columns: repeat(3, 1fr); }
+  .services-grid--addon { grid-template-columns: repeat(2, 1fr); }
 
   /* Testimonials: 3 columns */
   .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
