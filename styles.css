@@ -1837,3 +1837,43 @@ p:last-child { margin-bottom: 0; }
     scroll-behavior: auto !important;
   }
 }
+
+/* ============================================================
+   20. LEGAL / PRIVACY PAGE & FOOTER PRIVACY LINK
+   ============================================================ */
+
+.footer-privacy-link {
+  color: var(--color-gold-light);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-privacy-link:hover { color: var(--color-white); opacity: 1; }
+
+.legal-section {
+  padding: var(--section-pad) 0;
+  background-color: var(--bg-body);
+  min-height: 70vh;
+}
+.legal-inner { max-width: 820px; }
+.legal-inner h1 { margin-bottom: var(--space-2); }
+.legal-updated {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-8);
+}
+.legal-inner h2 {
+  font-size: var(--text-2xl);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-3);
+}
+.legal-inner p,
+.legal-inner li {
+  color: var(--text-secondary);
+  line-height: var(--leading-normal);
+}
+.legal-inner ul {
+  margin: 0 0 var(--space-4) var(--space-6);
+}
+.legal-inner li { margin-bottom: var(--space-2); }
+.legal-inner a { text-decoration: underline; text-underline-offset: 2px; }
+.legal-back { padding: 0.5rem 1rem; }

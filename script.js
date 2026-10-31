@@ -10,11 +10,29 @@
  *  5. Contact Form: validation & submission handling
  *  6. Footer: current year injection
  *  7. Active nav link on scroll (IntersectionObserver)
+ *  8. Analytics events: phone clicks, email clicks, form leads
  * ============================================================
  */
 
 (function () {
   'use strict';
+
+  /* ----------------------------------------------------------
+     ANALYTICS HELPER
+     Sends an event to Google Analytics (gtag) and Microsoft
+     Clarity when those tags are loaded. Safe if either is
+     blocked or missing — it never throws.
+  ---------------------------------------------------------- */
+  function trackEvent(gaName, gaParams, clarityName) {
+    try {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', gaName, gaParams || {});
+      }
+      if (typeof window.clarity === 'function') {
+        window.clarity('event', clarityName || gaName);
+      }
+    } catch (e) { /* analytics must never break the page */ }
+  }
 
   /* ----------------------------------------------------------
      UTILITY: Get element(s)
@@ -362,6 +380,9 @@
             formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
 
+          // Analytics: count a successful lead submission
+          trackEvent('generate_lead', { form_name: 'contact' }, 'form_submit_success');
+
           form.reset();
         })
         .catch(function () {
@@ -412,6 +433,30 @@
       target.setAttribute('tabindex', '-1');
       target.focus({ preventScroll: true });
     });
+  });
+
+
+  /* ==========================================================
+     8. ANALYTICS EVENTS: Phone & Email Clicks
+     One delegated listener covers every tel: and mailto: link
+     (header, hero, mobile bar, contact, footer).
+     - phone_click  → link_location = id of the section it sits in
+     - email_click  → same
+     Form leads are tracked in the submit handler above
+     (event: generate_lead).
+  ========================================================== */
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest ? e.target.closest('a[href^="tel:"], a[href^="mailto:"]') : null;
+    if (!link) return;
+
+    var isPhone = link.getAttribute('href').indexOf('tel:') === 0;
+    var section = link.closest('section[id], header, footer');
+    var location = link.classList.contains('sticky-call-btn')
+      ? 'sticky-mobile-button'
+      : (section ? (section.id || section.tagName.toLowerCase()) : 'page');
+
+    trackEvent(isPhone ? 'phone_click' : 'email_click', { link_location: location });
   });
 
 })();
